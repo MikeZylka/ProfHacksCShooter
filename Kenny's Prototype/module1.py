@@ -22,11 +22,11 @@ while True:
         heightBottom = img.shape[0] - ( y - (newChanning.shape[0] - w))
         widthLeft = img.shape[1] - (x - newChanning.shape[1])
         widthRight = img.shape[1] - (x - (newChanning.shape[1] - w))
-        print(f"{heightTop}, {heightBottom}, {widthLeft}, {widthRight}")
+        print("{heightTop}, {heightBottom}, {widthLeft}, {widthRight}".format())
         newChanning = cv2.copyMakeBorder(newChanning, heightTop, heightBottom, widthLeft, widthRight, bord)
         img = cv2.addWeighted(newChanning, .5, img, .5, 0)
         #img = channing_roi
-        print(f"Person detected at {x}, {y}, {w}, {h}")
+        print("Person detected at {x}, {y}, {w}, {h}".format())
     cv2.imshow('Video', img)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
