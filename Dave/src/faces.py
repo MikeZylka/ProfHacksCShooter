@@ -25,9 +25,21 @@ while(True):
         thickness = 4
         x1 = x + w
         y1 = y + h
-        cv2.rectangle(img, (x,y), (x1, y1), color, thickness)
         cv2.rectangle(img, (width//2, 0), (width//2, height), (0,0,255), 2)
         cv2.rectangle(img, (0,height//2), (width, height//2), (0,0,255), 2)
+        cv2.rectangle(img, (x,y), (x1, y1), color, thickness)
+
+        com = (x+(w//3) + (((x+w-(w//3)) - (x+(w//3))) // 2), y+h-(h//3) + ((y+h+(h//7)) - (y+h-(h//3)))//2 ) 
+
+        
+        dy = (height // 2) - com[1]
+        #print(dy) 
+
+        dx = com[0] - (width // 2) 
+        #print(dx)
+
+        PTI = (8.5 * dy) / h
+        print(PTI)
 
         if (sTime != cTime):
             sum = 0
@@ -43,6 +55,8 @@ while(True):
         
 
         cv2.rectangle(img, (x+(w//3), y+h-(h//3)), (x+w-(w//3), y+h+(h//7)), (0,255,0), 2)
+
+        cv2.rectangle(img, com, com, (0,255, 255), 5)
         
         #img_item = "data.png"
         #cv2.imwrite(img_item, roi_color)
