@@ -29,7 +29,7 @@ while(True):
         cv2.rectangle(img, (0,height//2), (width, height//2), (0,0,255), 2)
         cv2.rectangle(img, (x,y), (x1, y1), color, thickness)
 
-        com = (x+(w//3) + (((x+w-(w//3)) - (x+(w//3))) // 2), y+h-(h//3) + ((y+h+(h//7)) - (y+h-(h//3)))//2 ) 
+        com = (x+(w//3) + (((x+w-(w//3)) - (x+(w//3))) // 2), y+h-(h//3) + ((y+h+(h//7)) - (y+h-(h//3)))//3 ) 
 
         
         dy = (height // 2) - com[1]
