@@ -8,7 +8,7 @@
     "nan": "^2.13.1"
   },
   "devDependencies": {
-    "tape": "^3.0.0",
+    "tape": "^5.6.1",
     "glob": "^5.0.3",
     "request": "^2.44.0"
   },
